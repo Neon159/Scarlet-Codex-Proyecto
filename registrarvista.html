@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="Re.css">
+    <link href="csss/styles.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="icon" href="img/Iconooo.jpeg">
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-lg-5">
+            <a class="navbar-brand" href="paginaPrimaria.html">Scarlet Codex</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <!-- <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="CrearCurso.html">Crear-curso</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="ListaCursos.html">Cursos</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="loginvista.html">Iniciar sesion</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Registrarse</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <form action="correo.php" method="POST" class="formulario contact-form" id="form-registro">
+
+        <h1>Registrate</h1>
+        <div class="contenedor form">
+
+            <div class="input-contenedor">
+                <i class="fas fa-user icon contact-form"></i>
+                <input type="text" placeholder="Nombre" id="nombre" name="nombre" title="Su nombre letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+
+            </div>
+            <!-- Pattern = patron que tiene que cumplir -->
+            <!-- El pattern solo permite escribir letras y espacios en blanco -->
+            <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <input type="text" placeholder="Apellido" id="apellido" name="apellido" title="Su apellido letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+
+            </div>
+            <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <input type="text" placeholder="Dni" id="dni" name="dni" title="Escriba su DNI" required>
+
+            </div>
+            <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <input type="date" placeholder="Fecha de nacimiento" id="fecha" name="fecha" required title="Fecha de nacimiento">
+
+            </div>
+            <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <input type="text" placeholder="Genero" id="genero" name="genero" required>
+
+            </div>
+            <!-- Para correo  una opcion por ponerlo -->
+
+            <!-- pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+								title="mail incorrerct perro"
+									required -->
+
+            <div class="input-contenedor">
+                <i class="fas fa-envelope icon"></i>
+                <input type="email" placeholder="Usuario" id="Icorreo" name="correo " pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" title="Por favor escriba un correo que exista" required>
+
+            </div>
+
+            <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <input type="password" placeholder="Contraseña" id="Icontraseña" name="contrasena" required>
+
+            </div>
+            <input type="submit" value="Registrate" class="button" id="sign-up-btn">
+            <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+            <p>¿Ya tienes una cuenta?<a class="link" href="loginvista.html">Iniciar Sesion</a></p>
+
+            <div class="contact-from-response none">
+                <p>Los datos han sido enviados</p>
+            </div>
+        </div>
+    </form>
+
+    <br>
+    <footer class="py-5 bg-dark" style="margin-top: 2%;">
+        <div class="container">
+            <p class="m-0 text-center text-white">@UNIVERSIDAD PERUANA UNION SEDE-TARAPOTO</p>
+        </div>
+        <div class="container">
+            <p class="m-0 text-center text-white">@Karl Nicolas &copy; 999 888 777</p>
+        </div>
+    </footer>
+
+    <script src="js/appregistro.js" type="module"></script>
+    <script src="js/sweetalert2.min.js"></script>
+</body>
+
+</html>

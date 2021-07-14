@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: linear-gradient(to left top, #4cade1, #008fd6, #0070c9, #004fb6, #0b2b9d);
+    color: white;
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+/*navigacion*/
+
+.nav-main{
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 20px 0;
+}
+
+.nav-brand{
+    width: 50px;
+}
+
+/*navegacion izquierda*/
+
+.nav-main ul{
+    display: flex;
+}
+
+.nav-main ul li{
+    padding: 10px;
+}
+.nav-main ul li a{
+    padding: 6px;
+}
+.nav-main ul li a:hover{
+    border-bottom:2px solid white ;
+}
+
+.nav-main ul.nav-menu{
+    flex: 1;
+    margin-left: 20px;
+}
+
+
+.news-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    margin: 10px;
+}
+
+.news-cards img{
+    width: 100%;
+    height: 180px;
+}
+
+.news-cards h3{
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.news-cards a{
+    padding: 10px 0;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.news-cards a:hover{
+    text-decoration: underline;
+}

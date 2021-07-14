@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es-En">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingles</title>
+
+    <!-- <link rel="stylesheet" href="listacursos.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css ">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="EstiloCursos.css">
+    <link href="csss/styles.css" rel="stylesheet" />
+    <!-- icono -->
+    <link rel="icon" href="img/Iconooo.jpeg">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-lg-5">
+            <a class="navbar-brand" href="indexxx.html">Cerrar sesion</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <!-- <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="CrearCurso.html">Crear-curso</a></li> -->
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="Ingles.html">Scarlet Codex</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="Ingles.html">Ingles</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Comunicacion.html">Comunicacion</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Arte.html">Arte</a></li>
+                        <li class="nav-item"><a class="nav-link" href="FDI.html">Calculo III</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <div class="target" id="addclase">
+        <!--contenido de cartas-->
+    </div>
+
+    <br>
+
+    <footer class="py-5 bg-dark" style="margin-top: 21%;">
+        <div class="container">
+            <p class="m-0 text-center text-white">@UNIVERSIDAD PERUANA UNION SEDE-TARAPOTO</p>
+        </div>
+        <div class="container">
+            <p class="m-0 text-center text-white">@Karl Nicolas &copy; 999 888 777</p>
+        </div>
+    </footer>
+    <script>
+        (() => {
+            // JSON.stringify CONVIERTE TU OBJETO A STRING
+            // JSON.PARSE CONVIERTE TU STRING QUE SUBISTE A OBJETO
+            let obtenerClase = JSON.parse(localStorage.getItem('Ings'));
+            let AgregarClase = document.getElementById("addclase");
+            for (let i = 0; i < obtenerClase.length; i++) {
+                let title = obtenerClase[i].NombreClase;
+                let URLI = obtenerClase[i].URLI;
+                let URL = obtenerClase[i].URL;
+                let DescripcionClase = obtenerClase[i].DescripcionClase;
+
+                console.log(obtenerClase);
+
+                AgregarClase.innerHTML += `
+                        
+                        <div class="card ${title}" >
+                         <img class="pep ${title}" src="${URLI}" alt="">
+                            <div class="desc ${title}">
+                        <h5 class="pep ${title}">${title}</h5>
+                        <p class=" pep ${title}">${DescripcionClase}</p>
+                       </div>
+                     
+        </div>`;
+            }
+        })();
+
+        function cargarURL() {
+            window.location.href = "descripcionc1.html";
+        }
+    </script>
+    <script src="js/relacion-video-ingles.js"></script>
+
+</body>
+
+</html>

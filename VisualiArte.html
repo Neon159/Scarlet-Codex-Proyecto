@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="icon" href="img/Iconooo.jpeg">
+    <link href="csss/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-lg-5">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <!-- <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="CrearCurso.html">Crear-curso</a></li> -->
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="indexxx.html">Cursos</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+
+    <div class="video" id="addclase">
+        <iframe id="iframeVideo" width="560" height="315" src="https://www.youtube.com/embed/CDV2AwOeeis" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="p-5">
+                    <img id="loadImg" class="img-fluid rounded-
+                        diamond" src="img/ingless.jpeg" alt="..." />
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="p-5">
+                    <h2 class="display-4" id="titleCurso">Verb to be</h2>
+                    <p id="descripcionCurso">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <br>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">@UNIVERSIDAD PERUANA UNION SEDE-TARAPOTO</p>
+        </div>
+        <div class="container">
+            <p class="m-0 text-center text-white">@Karl Nicolas &copy; 999 888 777</p>
+        </div>
+    </footer>
+
+    <script>
+        (() => {
+            // JSON.stringify CONVIERTE TU OBJETO A STRING
+            // JSON.PARSE CONVIERTE TU STRING QUE SUBISTE A OBJETO
+            let loadVideo = JSON.parse(localStorage.getItem("loadVideo"));
+            let url = loadVideo.URL;
+            let NombreClase = loadVideo.NombreClase;
+            let desc = loadVideo.DescripcionClase;
+            let image = loadVideo.URLI;
+            console.log(url);
+
+            document.getElementById('iframeVideo').setAttribute("src", url);
+            document.getElementById('titleCurso').innerHTML = NombreClase;
+            document.getElementById('descripcionCurso').innerHTML = desc;
+            document.getElementById('loadImg').setAttribute("src", image);
+        })();
+    </script>
+    <script src="js/relacion-videos.js"></script>
+</body>
+
+</html>

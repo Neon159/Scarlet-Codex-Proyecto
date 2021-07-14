@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es-En">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar sesion</title>
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="csss/styles.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="icon" href="img/Iconooo.jpeg">
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-lg-5">
+            <a class="navbar-brand" href="paginaPrimaria.html">Scarlet Codex</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <!-- <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="CrearCurso.html">Crear-curso</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="ListaCursos.html">Cursos</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="#!">Iniciar sesion</a></li>
+                    <li class="nav-item"><a class="nav-link" href="registrarvista.html">Registrarse</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <form class="formulario" id="form-logeo">
+
+        <h1>Login</h1>
+        <div class="contenedor">
+
+
+
+            <div class="input-contenedor">
+                <i class="fas fa-envelope icon"></i>
+                <input type="text" placeholder="Usuario" id="Icorreo">
+
+            </div>
+
+            <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <input type="password" placeholder="Contraseña" id="Icontraseña">
+            </div>
+
+            <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <input type="password" placeholder="ID Admin" id="IdAdmin">
+            </div>
+
+            <input type="submit" value="Login" class="button" id="sign-in-btn">
+
+
+            <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+            <p>¿No tienes una cuenta? <a class="link" href="registrarvista.html">Registrate </a></p>
+        </div>
+    </form>
+
+
+    <footer class="py-5 bg-dark" style="margin-top: 12%;">
+        <div class="container">
+            <p class="m-0 text-center text-white">@UNIVERSIDAD PERUANA UNION SEDE-TARAPOTO</p>
+        </div>
+        <div class="container">
+            <p class="m-0 text-center text-white">@Karl Nicolas &copy; 999 888 777</p>
+        </div>
+    </footer>
+
+
+    <script src="js/applogin.js" type="module"></script>
+    <script src="js/sweetalert2.min.js"></script>
+</body>
+
+</html>
